@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const BrandSchema = mongoose.Schema({
+const BrandSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
   country: { type: String, required: true, trim: true },
   models: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Model' }],
